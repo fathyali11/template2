@@ -128,8 +128,6 @@ header .container .form i {
     }
 }
 
-
-
 @media (max-width:767px) {
     header .container nav ul {
         display: none;
@@ -148,13 +146,17 @@ header .container .form i {
         top: 100%;
         left: 0;
         width: 100%;
+        background-color: rgb(0 0 0 / 50%);
     }
+
     header .container .toggle-menu:hover+ul li a {
         padding: 15px !important;
     }
+
     header .container .toggle-menu:hover+ul li a:hover {
         background-color: var(--transparent-color);
     }
+
     header .container .toggle-menu:hover+ul li a.active {
         color: var(--main-color);
         border-bottom: 1px solid var(--main-color);
@@ -258,6 +260,8 @@ header .container .form i {
         width: 100%;
         padding: 20px;
         justify-content: center;
+        position: relative;
+        z-index: 1;
     }
 
     .landing .text .content h2 {
