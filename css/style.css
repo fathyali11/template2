@@ -586,6 +586,7 @@ header .container .form i {
     height: 100%;
     object-fit: cover;
 }
+
 @media (max-width:767px) {
     .video {
         height: 300px;
@@ -612,11 +613,13 @@ header .container .form i {
     text-transform: uppercase;
     margin-bottom: 20px;
 }
+
 .video .text p {
     font-size: 16px;
     margin-bottom: 30px;
     line-height: 1.8;
 }
+
 .video .text button {
     padding: 10px 20px;
     font-size: 16px;
@@ -628,3 +631,29 @@ header .container .form i {
 }
 
 /* end video section */
+
+/* start about section */
+.about {
+    padding-top: var(--section-padding);
+    overflow: hidden;
+    height: 620px;
+    position: relative;
+}
+
+.about .image {
+    text-align: center;
+}
+
+@media (max-width:767px) {
+    .about {
+        height: 500px;
+    }
+
+    .about .image img {
+        width: 80%;
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
