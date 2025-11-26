@@ -47,6 +47,50 @@ ul {
     }
 }
 
+.main-heading {
+    text-align: center;
+}
+
+.main-heading h2 {
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+
+.main-heading h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: #333;
+    bottom: -30px;
+    width: 120px;
+}
+
+.main-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    bottom: -38px;
+    background-color: white;
+}
+
+.main-heading p {
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+}
+
 header {
     left: 0;
     position: absolute;
@@ -282,30 +326,13 @@ header .container .form i {
 /* .services section */
 
 .services {
-    padding: 100px 0;
+    padding: var(--section-padding) 0;
     overflow-x: hidden;
 }
 
 .services .services-container {
     width: 100%;
     box-sizing: border-box;
-}
-
-.services .main-heading {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.services .main-heading h2 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 35px;
-}
-
-.services .main-heading p {
-    font-size: 16px;
-    color: #777;
-    line-height: 1.8;
 }
 
 .services .services-container {
@@ -356,7 +383,7 @@ header .container .form i {
 
 /* design section */
 .design {
-    padding: 100px 0;
+    padding: var(--section-padding) 0;
     background-image: url("/images/design-features.jpg");
     background-size: cover;
     position: relative;
@@ -381,6 +408,7 @@ header .container .form i {
     left: 6%;
     bottom: -100px;
 }
+
 @media (max-width:767px) {
     .design .image {
         display: none;
@@ -399,6 +427,7 @@ header .container .form i {
     background-color: var(--transparent-color);
     color: white;
 }
+
 @media (max-width:767px) {
     .design .text {
         width: 100%;
@@ -407,26 +436,128 @@ header .container .form i {
         top: auto;
         transform: none;
     }
+
     .design {
         height: auto;
     }
 }
+
 .design .text h2 {
     margin-bottom: 30px;
     font-size: 30px;
     font-weight: 300;
 }
+
 .design .text ul li {
     margin-bottom: 15px;
     font-size: 16px;
     line-height: 1.8;
     position: relative;
 }
+
 .design .text ul li::before {
-        content: "\f108";
+    content: "\f108";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     position: relative;
     margin-right: 20px;
     left: 0;
 }
+
+/* End of design section */
+
+/* start portfolio section */
+.portfolio {
+    padding: var(--section-padding) 0;
+    background-color: #f9f9f9;
+}
+
+.portfolio .container .shuffle {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 60px;
+}
+
+.portfolio .container .shuffle li.active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.portfolio .container .shuffle li {
+    padding: 10px;
+}
+
+.portfolio .imgs-container {
+    display: grid;
+}
+
+@media (max-width:767px) {
+    .portfolio .imgs-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width:768px) {
+    .portfolio .imgs-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:1200px) {
+    .portfolio .imgs-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.portfolio .imgs-container .box {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .imgs-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.portfolio .imgs-container .caption {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    text-align: left;
+    transition: bottom 0.3s ease;
+}
+
+.portfolio .imgs-container .caption h4 {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.portfolio .imgs-container .caption p {
+    color: var(--main-color);
+}
+
+.portfolio .imgs-container .box:hover .caption {
+    bottom: 0;
+}
+
+.portfolio .imgs-container .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+.portfolio .more {
+    text-decoration: none;
+    display: block;
+    background-color: var(--main-color);
+    margin: 30px auto;
+    width: fit-content;
+    padding: 15px 20px;
+    color: white;
+    text-transform: uppercase;
+}
+/* end portfolio section */
