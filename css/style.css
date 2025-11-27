@@ -833,6 +833,7 @@ header .container .form i {
     align-items: center;
     justify-content: center;
 }
+
 .our-skills .testimonials>ul li {
     width: 15px;
     height: 15px;
@@ -841,18 +842,20 @@ header .container .form i {
     margin: 0 5px;
     cursor: pointer;
 }
+
 .our-skills .testimonials>ul li.active {
     background-color: var(--main-color);
     border: none;
 }
 
-.our-skills .skills >h3 {
+.our-skills .skills>h3 {
     text-align: center;
     margin-bottom: 30px;
     font-weight: 400;
     text-transform: uppercase;
 }
-.our-skills .skills >p {
+
+.our-skills .skills>p {
     text-align: center;
     margin-bottom: 50px;
     line-height: 2;
@@ -862,11 +865,13 @@ header .container .form i {
 .our-skills .skills .prog-holder {
     margin-bottom: 40px;
 }
+
 .our-skills .skills .prog-holder h4 {
-        font-weight: normal;
+    font-weight: normal;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
+
 .our-skills .skills .prog-holder .prog {
     background-color: #dedadc;
     height: 30px;
@@ -896,6 +901,7 @@ header .container .form i {
     font-size: 17px;
     text-align: center;
 }
+
 .our-skills .skills .prog-holder .prog span::after {
     content: '';
     position: absolute;
@@ -907,4 +913,39 @@ header .container .form i {
     border-style: solid;
     border-color: black transparent transparent transparent;
 }
+
 /* end our-skills section */
+
+/* start quote section */
+.quote {
+    padding: var(--section-padding) 0;
+    background-image: url("/images/quote.jpg");
+    position: relative;
+}
+
+.quote::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 80%);
+    z-index: 1;
+}
+
+.quote .container {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.quote .container q {
+    display: block;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* end quote section */
